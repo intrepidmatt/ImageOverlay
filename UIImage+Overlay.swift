@@ -17,7 +17,7 @@ extension UIImage {
         let context = UIGraphicsGetCurrentContext()
         
         // Draw image into context, then fill using the proper color and blend mode
-        self.drawInRect(bounds, blendMode: .Normal, alpha: 1.0)
+        drawInRect(bounds, blendMode: .Normal, alpha: 1.0)
         CGContextSetBlendMode(context, blendMode)
         CGContextSetFillColorWithColor(context, color.CGColor)
         CGContextFillRect(context, bounds)
@@ -30,6 +30,6 @@ extension UIImage {
     }
     
     func applyOverlayWithColor(color: UIColor, blendMode: CGBlendMode, alpha: CGFloat) -> UIImage? {
-        return self.applyOverlayWithColor(color.colorWithAlphaComponent(alpha), blendMode: blendMode)
+        return applyOverlayWithColor(color.colorWithAlphaComponent(alpha), blendMode: blendMode)
     }
 }
