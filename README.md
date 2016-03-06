@@ -7,4 +7,4 @@ Add `UIImage+Overlay.swift` to your project, then call `applyOverlayWithColor()`
 
     let image = UIImage(named: "MyImage")
     let imageWithOverlay = image.applyOverlayWithColor(UIColor.blueColor(), blendMode: .Color, alpha: 0.5)
-    self.myImageview.image = imageWthOverlay
+    self.myImageview.image = imageWithOverlay
